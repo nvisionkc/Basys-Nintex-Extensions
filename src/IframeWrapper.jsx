@@ -5,7 +5,7 @@ import { IFrame } from "./Iframe";
 
 class IFrameWrapper extends reactToWebComponent(IFrame, React, ReactDOM, {
   shadow: "open",
-  props: ["name", "title", "src", "height"],
+  props: ["name", "title", "src", "width", "height"],
 }) {
   static getMetaConfig = () =>
     Promise.resolve({
