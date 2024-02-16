@@ -12,5 +12,5 @@ To register this plugin in your tenant:
 4. Use the following details: 
     * Element name: nintex-react-iframe
     * Description: React IFrame Simple
-    * Source URL: https://nintexplatform.github.io/form-plugin-react-example/examples/main.js
+    * Source URL: https://nvisionkc.github.io/Basys-Nintex-Extensions/dist/main.js
 5. Click `Create`.
