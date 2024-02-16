@@ -5,32 +5,7 @@ export const IFrame = ({ name = "UploadControl", title = "Upload Control", src =
 
   const elementStyles = { height: height, borderWidth: "0px", width: width };
 
-  useEffect(() => {
-    const handleMessage = (event) => {
-      //if (event.origin !== "https://localhost:7242") {
-        // Make sure the message is from the expected origin
-        //return;
-      //}
-
-      // Handle the message sent from the iframe
-      console.log('Message received from iframe:', event.data);
-      const args = {
-        bubbles: true,
-        cancelable: false,
-        composed: true,
-        detail: event.data
-      };
-      const customEvent = new CustomEvent('ntx-value-change', args);
-      element.dispatchEvent(customEvent);
-    };
-
-    window.addEventListener('message', handleMessage);
-
-    // Cleanup function to remove the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('message', handleMessage);
-    };
-  }, []); // Empty dependency array means this effect runs once on mount
+   // Empty dependency array means this effect runs once on mount
 
   return (
     <>
