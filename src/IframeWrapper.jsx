@@ -9,7 +9,7 @@ class IFrameWrapper extends reactToWebComponent(IFrame, React, ReactDOM, {
 }) {
   static getMetaConfig = () =>
     Promise.resolve({
-      controlName: "basys-aot-app-validator",
+      controlName: "PDF Version Validator",
       fallbackDisableSubmit: false,
       description: "BASYS application validator and version checker",
       iconUrl: "one-line-text",
