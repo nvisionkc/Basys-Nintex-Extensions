@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export const IFrame = ({ name = "UploadControl", title = "Upload Control", src = "https://localhost:7242/upload", height = "200px", width = "350px" }) => {
+export const IFrame = ({ name = "UploadControl", title = "Upload Control", src = "https://localhost:7242/upload", height = "400px", width = "100%" }) => {
   const styles = `...`; // your styles remain unchanged
 
   const elementStyles = { height: height, borderWidth: "0px", width: width };
