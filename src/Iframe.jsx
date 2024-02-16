@@ -8,7 +8,7 @@ export const IFrame = ({ name = "UploadControl", title = "Upload Control", src =
    // Empty dependency array means this effect runs once on mount
 
   return (
-    <>
+    <div>
       <style>{styles}</style>
       <iframe
         className="frame"
@@ -18,6 +18,6 @@ export const IFrame = ({ name = "UploadControl", title = "Upload Control", src =
         src={src}
         border="0"
       ></iframe>
-    </>
+    </div>
   );
 };
