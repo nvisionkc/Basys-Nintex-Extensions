@@ -15,8 +15,8 @@ export const IFrame = ({ name = "UploadControl", title = "Upload Control", src =
       // Handle the message sent from the iframe
       console.log('Message received from iframe:', event.data);
 
-      const event = new CustomEvent('ntx-value-change', args);
-      element.dispatchEvent(event);
+      const customEvent = new CustomEvent('ntx-value-change', args);
+      element.dispatchEvent(customEvent);
     };
 
     window.addEventListener('message', handleMessage);

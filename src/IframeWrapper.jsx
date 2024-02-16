@@ -9,18 +9,29 @@ class IFrameWrapper extends reactToWebComponent(IFrame, React, ReactDOM, {
 }) {
   static getMetaConfig = () =>
     Promise.resolve({
-      controlName: "react-iframe",
+      controlName: "basys-aot-app-validator",
       fallbackDisableSubmit: false,
-      description: "IFrame component which can render url view with the frame",
+      description: "BASYS application validator and version checker",
       iconUrl: "one-line-text",
-      groupName: "Visual",
+      groupName: "BASYS",
       version: "1.3",
       properties: {
-        src: {
+        current: {
           type: "string",
-          title: "Source URL",
+          title: "Current Version",
           description:
-            "URL of the iframe, please note many sites block been rendered in iframes",
+            "Current version of the application. This is the version that will be compared to the version in the BASYS application.",
+        },
+        overlap: {
+          type: "string",
+          title: "Overlap Version",
+          description:
+            "Overlapping version of the application if exists. This version will also be compared to the version in the BASYS application.",
+        },
+        width: {
+          type: "string",
+          title: "Width",
+          description: "Width of the component",
         },
         height: {
           type: "string",
@@ -36,4 +47,4 @@ class IFrameWrapper extends reactToWebComponent(IFrame, React, ReactDOM, {
     });
 }
 
-customElements.define("nintex-react-iframe", IFrameWrapper);
+customElements.define("basys-aot-app-validator", IFrameWrapper);
