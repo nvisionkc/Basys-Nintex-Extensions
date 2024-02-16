@@ -38,6 +38,13 @@ class IFrameWrapper extends reactToWebComponent(IFrame, React, ReactDOM, {
           title: "Height",
           description: "Height of the component",
         },
+        value: {
+          type: 'string',
+          title: 'Value',
+          isValueField: true,
+          description: "The extracted version from the BASYS application or 'InvalidVersion' if the version is not found or 'MissingTags' if the tags are not found.",
+          defaultValue: '',
+        },
       },
       standardProperties: {
         readOnly: true,
