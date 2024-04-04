@@ -1,8 +1,18 @@
 import React, { useEffect } from 'react';
-export const IFrame = ({ name = "UploadControl", title = "Upload Control", src = "https://desktop.tunnel.jasontoubia.net?current=&overlap=", height = "400px", width = "100%" }) => {
+export const IFrame = ({ 
+  name = "UploadControl", 
+  title = "Upload Control", 
+  src = "https://desktop.tunnel.jasontoubia.net?current=&overlap=", 
+  height = "400px", 
+  width = "100%",
+  current = "",
+  overlap = ""
+ }) => {
   const styles = `...`; // your styles remain unchanged
 
   const elementStyles = { height: height, borderWidth: "0px", width: width };
+
+  const fullSrc = `${src}?current=${encodeURIComponent(current)}&overlap=${encodeURIComponent(overlap)}`;
 
    // Empty dependency array means this effect runs once on mount
    useEffect(() => {
@@ -28,7 +38,7 @@ export const IFrame = ({ name = "UploadControl", title = "Upload Control", src =
         style={elementStyles}
         name={name}
         title={title}
-        src={src}
+        src={fullSrc}
         border="0"
       ></iframe>
     </div>
