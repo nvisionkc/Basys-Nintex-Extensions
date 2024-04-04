@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 export const IFrame = ({ 
   name = "UploadControl", 
   title = "Upload Control", 
-  src = "https://desktop.tunnel.jasontoubia.net?current=&overlap=", 
+  src = "https://desktop.tunnel.jasontoubia.net/", 
   height = "400px", 
   width = "100%",
   current = "",
