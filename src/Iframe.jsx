@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-export const IFrame = ({ name = "UploadControl", title = "Upload Control", src = "https://desktop.tunnel.jasontoubia.net?current=" + current + "&overlap=" + overlap, height = "400px", width = "100%" }) => {
+export const IFrame = ({ name = "UploadControl", title = "Upload Control", src = "https://desktop.tunnel.jasontoubia.net?current=&overlap=", height = "400px", width = "100%" }) => {
   const styles = `...`; // your styles remain unchanged
 
   const elementStyles = { height: height, borderWidth: "0px", width: width };
