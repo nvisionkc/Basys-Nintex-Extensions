@@ -17,6 +17,8 @@ export const IFrame = ({
    // Empty dependency array means this effect runs once on mount
    useEffect(() => {
     const handleMessage = (event) => {
+      console.log("Message received in iframe");
+      console.log(event.origin);
       // Check the origin of the message and ensure it's from your iframe
       //if (event.origin === "https://basysapphost") {
         // Handle the message, update form values or perform actions
