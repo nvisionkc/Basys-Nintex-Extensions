@@ -5,7 +5,7 @@ import { IFrame } from "./Iframe";
 
 class IFrameWrapper extends reactToWebComponent(IFrame, React, ReactDOM, {
   shadow: "open",
-  props: ["name", "title", "src", "width", "height", "current", "overlap"],
+  props: ["name", "title", "src", "width", "height", "current", "overlap", "value"],
 }) {
   static getMetaConfig = () =>
     Promise.resolve({
@@ -46,6 +46,7 @@ class IFrameWrapper extends reactToWebComponent(IFrame, React, ReactDOM, {
           defaultValue: '',
         },
       },
+      events: ["ntx-value-change"],
       standardProperties: {
         readOnly: true,
         required: true,
